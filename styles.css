@@ -1,0 +1,445 @@
+/* **************************** Fonts **************************** */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
+
+/* **************************** Site General Settings **************************** */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* **************************** Responsive Font Size **************************** */
+
+html {
+  font-size: 62.5%;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+/* @media (max-width: 568px) {
+  div.linktree .heading h2{
+    font-size: 2rem;
+  }
+
+  
+}
+
+@media (max-width: 472px) {
+  div.linktree .heading h2{
+    font-size: 2rem;
+  }
+  
+}  */
+/* **************************** Body Settings **************************** */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(45deg, #f74037, #ffcc1d, #14b25f, #1e90ff); */
+  background-size: 400% 400%;
+  /* animation: gradientAnimation 10s infinite; */
+  font-family: var(--mainfont);
+  color: var(--darkwhite);
+  /* 
+  border-top: 2rem solid var(--primaryred);
+  border-right: 2rem solid var(--primaryblue);
+  border-left: 2rem solid var(--primaryyellow);
+  border-bottom: 2rem solid var(--primarygreen); */
+}
+
+/* **************************** Root Variables **************************** */
+
+:root {
+  /* Default Colors */
+  --darkblack: #181a20;
+  --lightblack: #1f222b;
+  --darkwhite: #ffffff;
+  --darkwhite1: #ffe7e7;
+  --darkgrey: #262a34;
+  --lightgrey: #3a3f50;
+  --offgrey: #edeef7;
+
+  /* Theme Colors */
+  --primaryred: #f74037;
+  --primaryblue: #1e90ff;
+  --primarygreen: #14b25f;
+  --primaryyellow: #ffcc1d;
+
+  /* Default Fonts */
+  --mainfont: "Montserrat", sans-serif;
+  --textfont: "Roboto", sans-serif;
+  --textfont1: "Open Sans", sans-serif;
+}
+
+/* **************************** Scroll Bar **************************** */
+
+::-webkit-scrollbar {
+  display: none;
+
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--lightblack);
+  border-radius: 2px;
+}
+
+/* **************************** Selection **************************** */
+
+::selection {
+  color: var(--darkwhite);
+  background: var(--lightgrey);
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* **************************** Main Styles **************************** */
+
+section#linktree {
+  position: relative;
+  padding: 1.5rem 4rem;
+  width: 90%;
+  height: 90%;
+  /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); */
+  /* border-radius: 10px; */
+  overflow: hidden;
+}
+
+section#linktree::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.4),
+    rgba(0, 255, 0, 0.4),
+    rgba(0, 0, 255, 0.4),
+    rgba(255, 255, 0, 0.4)
+  ); */
+  z-index: -1;
+  opacity: 0;
+}
+
+div.linktree {
+  position: relative;
+  margin: auto;
+  padding: 2rem 4rem;
+}
+
+div#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* **************************** Lintree Heading **************************** */
+
+div.linktree .heading {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.linktree .heading img {
+  margin: auto;
+  width: 12rem;
+  height: auto;
+}
+
+div.linktree .heading h2 {
+  margin: 1rem auto 0.5rem;
+  font-size: 4rem;
+  font-weight: 500;
+  /* background-color: #ffffffb6; */
+  font-family: var(--textfont1);
+  color: var(--darkblack);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+div.linktree .heading p {
+  margin: 0.5rem auto;
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: var(--textfont);
+  color: var(--darkblack);
+  background-color: #ffffff96;
+
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* **************************** Lintree Handles **************************** */
+
+div.linktree .handles {
+  margin: 2rem auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 4rem;
+  place-items: center;
+  place-content: center;
+}
+
+div.linktree .handles .handle_card {
+  position: relative;
+  margin: 1rem 2rem;
+  padding: 2rem 0;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 92%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  /* overflow: hidden; */
+}
+
+/* /test */
+
+div.linktree .handles .handle_card:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #eff5f3;
+  /* background: rgb(232, 233, 229); */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+div.linktree .handles .handle_card:after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  background: linear-gradient(
+    45deg,
+    var(--primaryred),
+    var(--primaryblue),
+    var(--primarygreen),
+    var(--primaryyellow)
+  );
+  background-size: 250%;
+  border-radius: 4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  z-index: -20;
+  animation: mooove 10s linear infinite;
+}
+
+@keyframes mooove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+/* div.linktree .handles .handle_card:after {
+	filter: blur(50px);
+} */
+
+/* test after */
+
+div.linktree .handles .handle_card span img.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  height: auto;
+  opacity: 0.1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1;
+  filter: invert(1);
+  transition: all 0.35s linear;
+}
+
+div.linktree .handles .handle_card:hover span img.watermark {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+div.linktree .handles .handle_card img {
+  margin: 0.5rem auto;
+  width: 5rem;
+  height: auto;
+  color: #000;
+  /* background-color: #000; */
+}
+
+div.linktree .handles .handle_card p {
+  margin: 1rem auto;
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-family: var(--textfont);
+  color: #000;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+div.linktree .handles .handle_card a {
+  margin: 1rem auto;
+  padding: 0.6rem 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: var(--textfont1);
+  color: #000000;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 6px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  user-select: none;
+  transition: all 0.25s linear;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  /* border-top: 4px solid var(--primaryred);
+  border-right: 4px solid var(--primaryblue);
+  border-left: 4px solid var(--primaryyellow);
+  border-bottom: 4px solid var(--primarygreen); */
+
+  /* background: linear-gradient(45deg, var(--darkwhite), var(--darkwhite1)); */
+  /* background-size: 400% 400%; */
+  /* transition: background-position 0.5s ease; */
+}
+
+/* ----------------- */
+div.linktree .handles .handle_card a:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  background: var(--primaryblue);
+  color: white;
+}
+
+#particles-js {
+  filter: blur(2px);
+}
+
+div.linktree .handles .handle_card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+div.linktree .handles .handle_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ************************* Responsive Medias **************************** */
+
+@media (max-width: 992px) {
+  div.linktree {
+    padding: 2rem 0;
+  }
+
+  div.linktree .heading {
+    margin: 2rem auto 4rem;
+  }
+
+  div.linktree .handles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  div.linktree .handles {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  div.linktree .handles .handle_card {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 472px) {
+  section#linktree {
+    margin: 2rem;
+  }
+
+  div.linktree .handles .handle_card img {
+    width: 4rem;
+  }
+
+  div.linktree .handles .handle_card a {
+    padding: 0.5rem 1.7rem;
+  }
+}
+
+@media (max-width: 372px) {
+  div.linktree .heading img {
+    width: 10rem;
+  }
+  /* div.linktree .heading h2 {
+    font-size: 3.5rem;
+  } */
+}
+
+ @media (max-width: 568px) {
+  div.linktree .heading h2{
+    font-size: 3.5rem;
+  }  
+}
+
+@media (max-width: 472px) {
+  div.linktree .heading h2{
+    font-size: 2.8rem;
+  }  
+} 
+
+@media (max-width: 320px) {
+  div.linktree .heading h2{
+    font-size: 2.5rem;
+  }  
+} 
+/* body{
+  background: linear-gradient(
+    45deg,
+    #f7413741,
+    #1e8fff2d
+    ,#14b25e2c,
+    #ffca1d2f
+  );
+} */
+
+#main_heading,
+#sub_heading {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* **************************** Styles End **************************** */
+
+/* **************************** Main Styles **************************** */
