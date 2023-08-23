@@ -29,15 +29,15 @@ let linktreeData = [
     imgSrc: "./assets/linkedin.svg",
     imgAlt: "LinkedIn",
   },
-  // {
-  //   id: 4,
-  //   handleName: "YouTube",
-  //   handleText: "Subscribe to Our Channel",
-  //   handleLink: "https://www.youtube.com",
-  //   imgSrc2: "./assets/icons8-youtube.svg",
-  //   imgSrc: "./assets/youtube.svg",
-  //   imgAlt: "Youtube",
-  // },
+  {
+    id: 4,
+    handleName: "YouTube",
+    handleText: "Subscribe to Our Channel",
+    handleLink: "https://www.youtube.com/@gdsc_dmce",
+    imgSrc2: "./assets/icons8-youtube.svg",
+    imgSrc: "./assets/youtube.svg",
+    imgAlt: "Youtube",
+  },
   {
     id: 5,
     handleName: "Instagram",
@@ -83,15 +83,15 @@ let linktreeData = [
   //   imgSrc: "./assets/website.svg",
   //   imgAlt: "Website",
   // },
-  // {
-  //   id: 10,
-  //   handleName: "Mail Us",
-  //   handleText: "Feel Free to Contact Us",
-  //   handleLink: "dmcegdsc@gmail.com",
-  //   imgSrc2: "./assets/icons8-gmail.svg",
-  //   imgSrc: "./assets/mail.svg",
-  //   imgAlt: "Mail",
-  // },
+  {
+    id: 10,
+    handleName: "Mail Us",
+    handleText: "Feel Free to Contact Us",
+    handleLink: "dmcegdsc23@gmail.com",
+    imgSrc2: "./assets/icons8-gmail.svg",
+    imgSrc: "./assets/mail.svg",
+    imgAlt: "Mail",
+  },
 ];
 
 // All Handles Preview Mapping ****************************************************
